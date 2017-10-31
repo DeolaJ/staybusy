@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+ <meta charset="utf-8">
+ 	<title>
+ 		Welcome page
+ 	</title>
+    <meta name="description" content="staybusy project">  
+    <meta name="Adeola" content="staybusy">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <style>
+    	@import url("font-awesome/css/font-awesome.min.css");
+
+    	body, html {
+    		padding: 0;
+    		margin: 0;
+    		font-family: 'Poppins', sans-serif;
+    	}
+
+    	.top-content {
+    		display: flex;
+    		color: white;
+    		height: 100vh;
+    		overflow: hidden;
+    	}
+
+    	.logo {
+    		margin-top: 25px;
+    		margin-left: 70px;
+    		width: 80px;
+    	}
+
+    	div#letters.text-content {
+    		padding-top: 0 !important;
+    	}
+
+    	.text-content {
+    		flex-basis: 50%;
+    		flex: 1;
+    		background-color: #FF4266;
+    		padding-top: 50px;
+    	}
+
+    	.img-content {
+    		flex-basis: 50%;
+    		flex: 1;
+    	}
+
+    	.launch-content {
+    		padding: 0 70px;
+    		padding-top: 50px;
+    		margin: 0 auto;
+    		display: block;
+    		font-weight: bolder;
+    		font-size: 38px;
+    	}
+
+    	.launch-content p {
+    		margin-bottom: 10px;
+    	}
+
+    	.launch-info {
+    		display: block;
+    		margin-top: 80px;
+    		padding: 0 70px;
+    		font-size: 16px;
+    		line-height: 1.8;
+    	}
+
+    	.launch-info button {
+    		font-size: 16px;
+    		padding: 18px 30px;
+    		margin-bottom: 20px;
+    	}
+
+    	.button1 {
+    		border: 2px solid white;
+    		background-color: #FF4266;
+    		color: white;
+    		margin-right: 10px;
+    	}
+
+    	.button1:hover {
+    		border-color: white;
+    		color: rgb(10,10,10);
+    		background-color: white;
+    	}
+
+    	.button2 {
+    		border: 2px solid rgb(10,10,10);
+    		background-color: rgb(10,10,10);
+    		color: white;
+    	}
+
+    	.button2:hover {
+    		color: rgb(10,10,10);
+    		border-color: white;
+    		background-color: white;
+    	}
+
+    	img {
+    		height: 100%;
+    		width: 100%;
+    	}
+
+    	#counter {
+			width: 100%;
+			color: white;
+			text-align: center;
+			display: block;
+			margin: 0 auto;
+			font-weight: bold;
+		}
+
+		.day-content {
+			margin-right: 10px;
+		}
+
+		#counter span {
+			font: 28px;
+			font-family: 'Poppins', sans-serif;
+			display: inline;
+			float: left;
+		}
+
+		#counter span em {
+			font: 28px;
+			font-family: 'Poppins', sans-serif;
+			display: inline-block;
+		}
+
+		
+
+		.foot {
+    		position: relative;
+    		top: 20%;
+    		color: white;
+    		font-size: 15px;
+    		padding: 20px;
+    	}
+
+    	.foot-social {
+    		list-style-type: none;
+    	}
+
+
+    	.foot-social li {
+    		text-align: center;
+    		float: left;
+    		margin-right: 25px;
+    		font-size: 16px;
+    	}
+
+    	.foot-social a {
+    		color: white;
+    	}
+		
+		.bottom-content {
+			padding: 90px;
+		}
+
+		.bottom-content > div {
+			margin-top: 50px;
+		}
+
+		.bottom-content > div:nth-child(1) {
+			margin-top: 10px;
+		}
+
+		.bottom-content > div:nth-child(3) {
+			margin-top: 70px;
+		}
+
+		.bottom-content p {
+			font-size: 15px;
+			font-weight: lighter;
+			line-height: 2;
+		}
+
+		.what-images {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-row-gap: 40px;
+			grid-column-gap: 30px;
+		}
+
+		.what-images figure:nth-child(2n+2) {
+			margin-right: 0;
+			margin-left: 10px;
+		}
+
+		.what-images figure:nth-child(2n+1) {
+			margin-left: 0;
+			margin-right: 10px
+		}
+
+		.what-images img {
+			border-radius: 10px;
+		}
+
+		.what-images figcaption {
+			padding-left: 40px;
+			font-weight: bold;
+			margin-top: 10px;
+		}
+
+		.contact-content form {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			margin-top: 30px;
+		}
+
+		.contact-content form label:nth-child(2) {
+			margin-left: 20px;
+		}
+
+ 		.contact-content form label:nth-child(3) {
+ 			grid-column-end: span 2;
+ 		}
+
+ 		.contact-content form button {
+ 			width: 160px;
+ 			margin-top: 30px;
+ 			background-color: white;
+ 			border: 2px solid black;
+ 			border-radius: 2px;
+ 			color: black;
+ 			padding: 12px 20px;
+ 		}
+
+ 		.contact-content form button:hover {
+ 			color: white;
+ 			background: black;
+ 			border-color: black;
+ 		}
+
+		.contact-content input, .contact-content textarea {
+			border: none;
+			border-bottom: 1px solid rgb(130,130,130);
+		}
+
+		.contact-content textarea {
+			border-radius: 5px;
+		}
+
+		.contact-content label {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.about-content {
+			display: flex;
+			justify-content: space-between;
+			font-size: 16px;
+		}
+
+		.about-content > div {
+			flex-basis: 30%;
+		}
+
+		.about-content > div > div:nth-child(2), footer, .contact-content label {
+			color: rgb(130, 130, 130);
+		}
+
+		.about-head {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 10px;
+		}
+
+		footer {
+			text-align: center;
+			padding-bottom: 15px;
+			font-size: 16px;
+		}
+
+		@media screen and (min-width: 669px) and (max-width: 1050px) {
+			.text-content {
+	    		padding-top: 40px;
+	    	}
+
+	    	.logo {
+	    		margin-left: 40px;
+	    	}
+
+			.launch-content {
+	    		padding: 0 40px;
+	    		font-size: 30px;
+	    	}
+
+			.launch-content p {
+	    		margin-bottom: 7px;
+	    	}
+
+			.launch-info {
+	    		margin-top: 60px;
+	    		padding: 0 40px;
+	    		font-size: 14px;
+	    	}
+
+			.launch-info button {
+	    		font-size: 14px;
+	    		padding: 14px 26px;
+	    	}
+
+			#counter span {
+				font: 21px;
+			}
+
+			#counter span em {
+				font: 21px;
+			}
+
+			.foot {
+				top: 10%;
+	    		font-size: 15px;
+	    		padding: 17px;
+	    	}
+
+			.bottom-content {
+				padding: 50px;
+			}
+
+			.bottom-content p {
+				font-size: 12px;
+			}
+
+			.what-images {
+				grid-row-gap: 30px;
+				grid-column-gap: 25px;
+			}
+
+			.what-images figcaption {
+				padding-left: 25px;
+			}
+
+			.about-content {
+				font-size: 14px;
+			}
+		}
+
+		@media screen and (max-width: 670px) {
+			.top-content {
+				overflow: visible;
+			}
+
+
+	    	.logo {
+	    		margin-left: 40px;
+	    	}
+
+			.text-content {
+	    		position: absolute;
+	    		height: 100vh !important;
+	    		z-index: 4;
+	    		overflow: hidden;
+	    		background-color: rgba(0, 0, 0, 0.7);
+	    	}
+
+	    	.img-content {
+	    		position: absolute;
+	    		height: 100vh;
+	    		opacity: 0.9;
+	    		z-index: 1;
+	    	}
+
+	    	.img-content img {
+	    		height: 100%;
+	    		width: 100vw;
+	    	}
+
+	    	.launch-content {
+	    		padding: 0 40px;
+	    		font-size: 25px;
+	    	}
+
+			.launch-info {
+	    		margin-top: 60px;
+	    		padding: 0 40px;
+	    		font-size: 15px;
+	    	}
+
+	    	.button1 {
+	    		background-color: rgba(0, 0, 0, 0);
+	    	}
+
+	    	.button2 {
+	    		border: 2px solid #FF4266;
+	    		background-color: #FF4266;
+	    	}
+
+			.foot {
+				top: 12%;
+	    		font-size: 15px;
+	    		padding: 17px;
+	    	}
+
+	    	.bottom-content {
+				padding: 30px;
+				clear: both;
+			}
+
+			.bottom-content p {
+				font-size: 14px;
+			}
+
+			.what-images {
+				display: block;
+			}
+
+			.what-images figure {
+				margin-top: 50px;
+			}
+
+			.what-images figure:nth-child(2n+2) {
+				margin-right: 0;
+				margin-left: 0;
+			}
+
+			.what-images figure:nth-child(2n+1) {
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+			.contact-content form {
+				display: block;
+			}
+
+			.contact-content form label:nth-child(2) {
+				margin-left: 0;
+			}
+
+			.contact-content label {
+				margin-bottom: 30px;
+				font-size: 13px;
+			}
+
+			.contact-content form button {
+				margin-top: 0;
+			}
+
+			.about-content {
+				display: block;
+				font-size: 14px;
+			}
+
+			.about-content > div {
+				margin-bottom: 30px;
+			}
+
+			footer {
+				font-size: 15px;
+			}
+		}
+
+		@media screen and (max-width: 471px) {
+			.text-content {
+	    		height: 600px;
+	    	}
+
+			.img-content, .img-content img {
+	    		height: 650px;
+	    	}
+
+	    	.bottom-content > div:nth-child(1) {
+				margin-top: 110px;
+			}
+
+			.what-images img {
+				border-radius: 20px;
+			}
+
+			.foot {
+				top: 5%;
+	    	}
+	    }
+
+    </style>
+</head>
+<body>
+	<div class='top-content'>
+		<div class='text-content' id="letters">
+			<div class='logo'>
+				<img src='http://svencreations.com/stomp/images/youtube/stomp-logo-white.png' width='75px'>
+			</div>
+			<div class='launch-content'>
+				<p>Launching in</p>
+				<div id="counter" class="group">
+	                <span class="day-content">27 Days</span> 
+	                <span>14:</span>
+	                <span>20:</span>
+	                <span>60</span> 
+	            </div> 
+        	</div>            
+        	<div class='launch-info'>
+	            <div>
+	            	<p>We are launching soon and we will love to hear from you. Click below to subscribe to be notified of our services.</p>
+	            </div>
+	            <div>
+		            <button class='button1'>More Information</button>
+		            <button class='button2'>Subscribe Now!</button>
+	        	</div>
+        	</div>
+        	<div class='foot'>
+				<ul class="foot-social">
+			         <li><a href="#" target='_blank'><i class="fa fa-facebook"></i></a></li>
+			         <li><a title='#'><i class="fa fa-twitter"></i></a></li>
+			         <li><a href="#" target='_blank'><i class="fa fa-linkedin"></i></a></li>
+			         <li><a href="#" target='_blank'><i class="fa fa-google-plus"></i></a></li>
+			         <li><a href="#" target='_blank'><i class="fa fa-youtube-play"></i></a></li>
+		   		</ul>
+     		</div>
+		</div>
+		<div class='img-content'>
+			<img src="http://svencreations.com/stomp/images/youtube/main-bg.jpg">
+		</div>
+	</div>
+	<div class="bottom-content">
+		<div class='rhythm-content'>
+			<h3>RHYTHM OF CHANGE</h3>
+			<p>kjodj kjvkj ojdo kvj kjgh jdkdj. kdjfi dkihfiu kdhhi khkjvhihj div kkdh dbfkbv bviur vih vih vjb vfihv kiiius viujnsvijj vkubvskubvs iubkksiiiub iubvkbuv df. jdifhh. jidfhbn jhdifjhiounjiuv. ubj u ig ibu ug bbu hd v h vvbuv dvb v v jifjfoij. loee rkkrjr khj kjgk vkjood vkjk. kjodj kjvkj ojdo kvj kjgh jdkdj. kdjfi dkihfiu kdhhi khkjvhihj div kkdh dbfkbv bviur vih vih vjb vfihv kiiius viujnsvijj vkubvskubvs iubkksiiiub iubvkbuv df. jdifhh. jidfhbn jhdifjhiounjiuv. loee rkkrjr khj kjgk vkjood vkjk.</p>
+		</div>
+		<div class="what-content">
+			<h3>WHAT'S INSIDE</h3>
+			<p>loee rkkrjr khj kjgk vkjood vkjk. kjodj kjvkj ojdo kvj kjgh jdkdj. kdjfi dkihfiu kdhhi khkjvhihj div kkdh dbfkbv bviur vih vih vjb vfihv kiiius viujnsvijj vkubvskubvs iubkksiiiub iubvkbuv df.</p>
+			<div class='what-images'>
+				<figure>
+					<img src='http://svencreations.com/stomp/images/youtube/fashion-1.jpg' alt='Jump on the bandwagon'>
+					<figcaption>Jump on the bandwagon</figcaption>
+				</figure>
+				<figure>
+					<img src='http://svencreations.com/stomp/images/youtube/fashion-2.jpg' alt='Blessing in disguise'>
+					<figcaption>Blessing in disguise</figcaption>
+				</figure>
+				<figure>
+					<img src='http://svencreations.com/stomp/images/youtube/fashion-3.jpg' alt='Be tickled pink'>
+					<figcaption>Be tickled pink</figcaption>
+				</figure>
+				<figure>
+					<img src='http://svencreations.com/stomp/images/youtube/fashion-4.jpg' alt='Be a catch'>
+					<figcaption>Be a catch</figcaption>
+				</figure>
+			</div>
+		</div>
+		<div class='contact-content'>
+			<h3>GET IN TOUCH</h3>
+			<p>We are staybusy and we are here to get in touch with you. <br>How can we help you?</p>
+			<form>
+				<label for="name">Your name...<input type='text' name="name"/></label>
+				<label for='email'>Your email...<input type='email' name='email' /></label>
+				<label for='message'>Your message...<textarea name='message'></textarea></label>
+				<button class='contact-button' type='submit'>Send Message</button>
+			</form>
+		</div>
+		<div class='about-content'>
+			<div>
+				<div class='about-head'>Address</div>
+				<div>
+					Lagos Nigeria
+				</div>
+			</div>
+			<div>
+				<div class='about-head'>Email</div>
+				<div>
+					adeola.adeyemoJ@yahoo.com
+				</div>
+			</div>
+			<div>
+				<div class='about-head'>Phone</div>
+				<div>
+					+2348123857352
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		&copy; 2017 DEOLA
+	</footer>
+		<script src="js/jquery-1.11.3.min.js"></script> 
+		<script src="js/jquery.countdown.min.js"></script>		
+		<script>
+			var finalDate = '2017/11/31';
+
+				$('div#counter').countdown(finalDate)
+			   	.on('update.countdown', function(event) {
+
+			   		$(this).html(event.strftime('<span class="day-content">%D Days</span>' + 
+			   										 	 '<span>%H:</span>' + 
+			   										 	 '<span>%M:</span>' +
+			   										 	 '<span>%S</span>'));
+
+			   });
+		</script>
+</body>
+</html>
