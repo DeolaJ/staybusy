@@ -354,7 +354,7 @@
 
 			.text-content {
 	    		position: absolute;
-	    		height: 100vh !important;
+	    		height: 100vh;
 	    		z-index: 4;
 	    		overflow: hidden;
 	    		background-color: rgba(0, 0, 0, 0.7);
@@ -363,13 +363,13 @@
 	    	.img-content {
 	    		position: absolute;
 	    		height: 100vh;
+	    		width: 96vw;
 	    		opacity: 0.9;
 	    		z-index: 1;
 	    	}
 
 	    	.img-content img {
 	    		height: 100%;
-	    		width: 100vw;
 	    	}
 
 	    	.launch-content {
@@ -458,7 +458,7 @@
 
 		@media screen and (max-width: 471px) {
 			.text-content {
-	    		height: 600px;
+	    		height: 650px;
 	    	}
 
 			.img-content, .img-content img {
@@ -482,13 +482,17 @@
 </head>
 <body>
 	<div class='top-content'>
+		<!-- The top part of the page -->
 		<div class='text-content' id="letters">
+			<!-- the left text content of the top part of the page -->
 			<div class='logo'>
+				<!-- the logo -->
 				<img src='http://svencreations.com/stomp/images/youtube/stomp-logo-white.png' width='75px'>
 			</div>
 			<div class='launch-content'>
 				<p>Launching in</p>
 				<div id="counter" class="group">
+					<!-- the countdown -->
 	                <span class="day-content">27 Days</span> 
 	                <span>14:</span>
 	                <span>20:</span>
@@ -505,6 +509,7 @@
 	        	</div>
         	</div>
         	<div class='foot'>
+        		<!-- the icons at the bottom of the left part of the top part of the page -->
 				<ul class="foot-social">
 			         <li><a href="#" target='_blank'><i class="fa fa-facebook"></i></a></li>
 			         <li><a title='#'><i class="fa fa-twitter"></i></a></li>
